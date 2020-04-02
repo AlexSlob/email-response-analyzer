@@ -2,7 +2,7 @@
 
 ## Description of the problem
 
-Webhosting company provide customer support via emil. They record reply waiting time, type of
+Webhosting company provide customer support via email. They record reply waiting time, type of
 question, category and service. To improve customer satisfaction, they need analytical tool to
 evaluate these data.
 
