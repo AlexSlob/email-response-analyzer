@@ -15,9 +15,6 @@ public class RecordParser {
 
     /**
      * Return  Record  builded from parsed String
-     *
-     * @param line
-     * @return
      */
     public Record parseString(String line) {
         Objects.requireNonNull(line);
@@ -27,9 +24,6 @@ public class RecordParser {
 
     /**
      * Separates line to parts by 'space'
-     *
-     * @param line
-     * @return
      */
     private List<String> convertLineToParts(String line) {
         return Arrays.asList(line.split(" "));
@@ -49,32 +43,25 @@ public class RecordParser {
 
     /**
      * Build`s Record from given parsed fragments
-     *
-     * @param parts
-     * @param value
-     * @return
      */
     private Record createRecord(List<String> parts, Integer value) {
         int recordTypeIndex = 0;
         int serviceIndex = 1;
         int questionIndex = 2;
-        int responceIndex = 3;
+        int responseIndex = 3;
         int dateIndex = 4;
 
         return new Record(
                 RecordType.fromCharacter(parts.get(recordTypeIndex)),
                 Service.fromString(parts.get(serviceIndex)),
                 Question.fromString(parts.get(questionIndex)),
-                ResponseType.fromCharacter(parts.get(responceIndex)),
+                ResponseType.fromCharacter(parts.get(responseIndex)),
                 DateInterval.fromString(parts.get(dateIndex)),
                 value);
     }
 
     /**
      * Verifies that there are enough parts to get int value for WaitingTime Record
-     *
-     * @param parts
-     * @return
      */
     private Integer getValueFromParts(List<String> parts) {
         int valueIndex = 5;

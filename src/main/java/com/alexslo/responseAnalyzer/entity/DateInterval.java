@@ -9,8 +9,8 @@ import static com.alexslo.responseAnalyzer.util.DateUtil.parseDate;
 public class DateInterval {
 
     private static final String DATE_SEPARATOR = "-";
-    private Date dateFrom;
-    private Date dateTo;
+    private final Date dateFrom;
+    private final Date dateTo;
 
     public DateInterval(Date dateFrom) {
         this(dateFrom, null);

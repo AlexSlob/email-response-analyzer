@@ -14,9 +14,6 @@ public class RecordsAnalyzer {
 
     /**
      * Selects the appropriate records that match certain Query Record & returns list of processed data
-     *
-     * @param records
-     * @return
      */
     public List<String> analyzeRecords(List<Record> records) {
         Objects.requireNonNull(records);
@@ -41,9 +38,6 @@ public class RecordsAnalyzer {
 
     /**
      * Sums all values from WaitingTime Records that match give Query Record & returns sum divided to their quantity
-     *
-     * @param queryRecord
-     * @return
      */
     private Integer calculateAverageWaitingTime(List<Record> waitingTimeRecords, Record queryRecord) {
         List<Record> matchingWaitingTimeLines = getMatchingWaitingTimeLines(waitingTimeRecords, queryRecord);
@@ -61,9 +55,6 @@ public class RecordsAnalyzer {
 
     /**
      * Filters WaitingTime Records that match required Query Record
-     *
-     * @param queryRecord
-     * @return Record list
      */
 
     private List<Record> getMatchingWaitingTimeLines(List<Record> waitingTimeRecords, Record queryRecord) {

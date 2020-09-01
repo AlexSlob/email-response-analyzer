@@ -9,10 +9,7 @@ public class Application {
     private static final String FILE_PATH = "src/main/resources/files/input.txt";
 
     public static void main(String[] args) {
-
-        RecordParser recordParser = new RecordParser();
-        RecordsAnalyzer recordsAnalyzer = new RecordsAnalyzer();
-        EmailResponseAnalyzer responseAnalyzer = new EmailResponseAnalyzer(recordParser, recordsAnalyzer);
+        EmailResponseAnalyzer responseAnalyzer = new EmailResponseAnalyzer(new RecordParser(), new RecordsAnalyzer());
         responseAnalyzer.analyzeFile(FILE_PATH).forEach(System.out::println);
     }
 }

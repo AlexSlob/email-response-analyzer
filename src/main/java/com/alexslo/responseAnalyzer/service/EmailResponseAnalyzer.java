@@ -21,9 +21,6 @@ public class EmailResponseAnalyzer {
 
     /**
      * Analyzes input file and returns calculated result from analyzed Records
-     *
-     * @param filePath
-     * @return
      */
     public List<String> analyzeFile(String filePath) {
         Objects.requireNonNull(filePath);
@@ -39,9 +36,6 @@ public class EmailResponseAnalyzer {
 
     /**
      * Converts file data into list of String values. Verifies that file is readable and all needed part are present
-     *
-     * @param filePath
-     * @return
      */
     private List<String> analyzeFileToList(String filePath) {
         File inputFile = new File(filePath);

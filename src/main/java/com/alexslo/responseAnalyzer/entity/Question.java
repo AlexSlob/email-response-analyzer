@@ -4,9 +4,9 @@ import java.util.Objects;
 
 public class Question {
 
-    private Integer questionTypeId;
-    private Integer categoryId;
-    private Integer subcategoryId;
+    private final Integer questionTypeId;
+    private final Integer categoryId;
+    private final Integer subcategoryId;
     private static final String DOT_PATTERN = "\\.";
     private static final String ASTERISK = "*";
 

@@ -11,16 +11,14 @@ import static org.junit.Assert.*;
 public class EmailResponseAnalyzerTest {
 
     private EmailResponseAnalyzer responseAnalyzer;
-    private RecordParser parser;
-    private RecordsAnalyzer analyzer;
     private List<String> expectedResult;
     private final String FAKE_PATH = "src/main/resources/files/fake.txt";
     private final String FILE_PATH = "src/main/resources/files/input.txt";
 
     @Before
     public void init() {
-        parser = new RecordParser();
-        analyzer = new RecordsAnalyzer();
+        RecordParser parser = new RecordParser();
+        RecordsAnalyzer analyzer = new RecordsAnalyzer();
         responseAnalyzer = new EmailResponseAnalyzer(parser, analyzer);
         expectedResult = Arrays.asList("83", "100", "-");
     }

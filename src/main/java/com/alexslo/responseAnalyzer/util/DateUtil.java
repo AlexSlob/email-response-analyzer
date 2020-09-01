@@ -23,7 +23,7 @@ public class DateUtil {
         try {
             date = DATE_FORMATTER.parse(value);
         } catch (ParseException e) {
-            System.out.println(String.format("Unable to parse date from given value %s", value));
+            System.out.printf("Unable to parse date from given value %s%n", value);
         }
         return date;
     }

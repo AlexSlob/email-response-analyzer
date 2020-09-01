@@ -4,12 +4,12 @@ import java.util.Objects;
 
 public class Record {
 
-    private RecordType recordType;
-    private Service service;
-    private Question question;
-    private ResponseType responseType;
-    private DateInterval dateInterval;
-    private Integer value;
+    private final RecordType recordType;
+    private final Service service;
+    private final Question question;
+    private final ResponseType responseType;
+    private final DateInterval dateInterval;
+    private final Integer value;
 
     public Record(RecordType recordType, Service service,
                   Question question, ResponseType responseType,

@@ -4,8 +4,8 @@ import java.util.Objects;
 
 public class Service {
 
-    private Integer serviceId;
-    private Integer variationId;
+    private final Integer serviceId;
+    private final Integer variationId;
     private static final String DOT_PATTERN = "\\.";
     private static final String ASTERISK = "*";
 
